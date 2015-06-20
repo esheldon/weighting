@@ -163,9 +163,6 @@ class WeightNearest(dict):
         run will be made to remove zero-weight objects from the first set.
         In that case make sure to get the set of used indices with
         get_used_indices()
-
-        Often it is useful to use a lower n_near for the first pass than the
-        second
         
         parameters
         ----------
@@ -717,7 +714,7 @@ fi
 
 def test_gaussians(npass=1,
                    n_near1=5,
-                   n_near2=10,
+                   n_near2=5,
                    n1=100000,
                    n2=10000,
                    show=False, epsfile=None):
