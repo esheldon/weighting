@@ -45,9 +45,10 @@ def weight_match(data1, data2, n_near, npass=1, n_near2=None, cleanup=True):
     parameters
     ----------
     data1: numpy array
-        The first dataset, to be matched to the second
+        The first dataset, to be matched to the second.  Dimensions
+        are [npoints, ndim]
     data2: numpy array
-        The second dataset
+        The second dataset.  Dimensions are [npoints, ndim]
     n_near: int
         Number of nearest neighbors to use for the calculation
     npass: int, optional
@@ -76,6 +77,16 @@ class WeightNearest(dict):
     For 1 pass , you may want to ensure the domains of the two inputs overalap
     in a sensible way.  In principle the 2 pass method can do this for you, but
     it needs to be tuned.
+
+    parameters
+    ----------
+    data1: numpy array
+        The first dataset, to be matched to the second.  Dimensions
+        are [npoints, ndim]
+    data2: numpy array
+        The second dataset.  Dimensions are [npoints, ndim]
+    npass: int, optional
+        Number of passes, 1 or 2.  Default 1.
 
     examples
     --------
