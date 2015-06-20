@@ -19,14 +19,20 @@ python setup.py install --prefix=~/local
 
 ## compilation
 
-Currently codes for different number of dimensions are compiled separately.  e.g.
+Currently codes for different number of dimensions are compiled separately. The following
+make different executables 
 
 ```bash
+# makes calcweights5
 make ndim=5
+
+# makes calcweights1
 make ndim=1
 
+# installation
 make ndim=2 install
-
 make ndim=5 install prefix=~/local
+
+# uninstall
 make ndim=5 uninstall prefix=~/local
 ```
