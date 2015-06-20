@@ -10,9 +10,12 @@ Currently the python code just calls out to the C code.  I plan to make a proper
 C extension in the future
 
 ## Installing python code
-```
+```bash
 python setup.py install --prefix=/some/path
 python setup.py install --prefix=~/local
+
+# The python code calls out to the C code, so make
+# sure the executable is in your path
 ```
 
 # C code
