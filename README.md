@@ -9,7 +9,7 @@ wrapper is provided
 Currently the python code just calls out to the C code.  I plan to make a proper
 C extension in the future
 
-For an example, see the test code weighting.test_gaussians
+For an example, see the test code weighting.test_gaussians()
 
 ## Installing python code
 ```bash
