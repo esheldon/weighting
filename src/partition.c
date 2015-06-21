@@ -31,15 +31,16 @@ int partition(int k, const double *data, int *ind, int n)
 
             med = (parh + parl)/2;
             swap(&ind[med], &ind[parl+1]);
-            if(data[ind[parl]] > data[ind[parh]]) {
+
+            if (data[ind[parl]] > data[ind[parh]]) {
                 swap(&ind[parl], &ind[parh]);
             }
 
-            if(data[ind[parl+1]] > data[ind[parh]]) {
+            if (data[ind[parl+1]] > data[ind[parh]]) {
                 swap(&ind[parl+1], &ind[parh]);
             }
 
-            if(data[ind[parl]] > data[ind[parl+1]]) {
+            if (data[ind[parl]] > data[ind[parl+1]]) {
                 swap(&ind[parl], &ind[parl+1]);
             }
 
@@ -51,11 +52,11 @@ int partition(int k, const double *data, int *ind, int n)
             while(1) {
                 do {
                     up++;
-                } while(data[ind[up]] < val);
+                } while (data[ind[up]] < val);
 
                 do {
                     down--;
-                } while(data[ind[down]] > val);
+                } while (data[ind[down]] > val);
 
                 if(down < up) {
                     break;
