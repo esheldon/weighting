@@ -1,8 +1,9 @@
 # weighting
 Derive weights so that the distributions of two populations are proportional in N-dimensional space
 
-This is a pure C code based on the original C++ code by Carlos Cunha.  A python
-wrapper is provided
+This is a pure C code based on the original C++ code by Carlos Cunha;
+significant parts of the code are essentially unchanged.  A python wrapper is
+provided
 
 # python code
 
