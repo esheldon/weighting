@@ -32,11 +32,14 @@ make different executables
 # makes calcweights5
 make ndim=5
 
-# makes calcweights1
+# makes calcweights1.  Make sure to clean first
+make clean
 make ndim=1
 
 # installation
+make clean
 make ndim=2 install
+make clean
 make ndim=5 install prefix=~/local
 
 # uninstall
