@@ -567,6 +567,7 @@ def hist_match(data1, data2, binsize, extra_weights1=None):
         An extra set of weights to apply to data1.  The returned weights
         will include this weight
     """
+    from esutil.stat import histogram
 
     weights1 = zeros(data1.size)
     min2=data2.min()
@@ -610,6 +611,8 @@ def hist_match_remove(data1, data2, binsize, extra_weights1=None):
 
     """
     import esutil as eu
+    from esutil.stat import histogram
+
     min2=data2.min()
     max2=data2.max()
 
