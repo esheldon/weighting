@@ -4,7 +4,8 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-#define wlog(...) fprintf(stderr, __VA_ARGS__)
+//#define wlog(...) fprintf(stderr, __VA_ARGS__)
+#define wlog(...) printf(__VA_ARGS__)
 
 void pflush(char * format, ...);
 FILE* open_or_exit(const char* filename, const char* mode);

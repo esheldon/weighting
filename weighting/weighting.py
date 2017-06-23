@@ -21,6 +21,11 @@ hist_match_remove:
 
 from __future__ import print_function
 
+try:
+    xrange
+except:
+    xrange=range
+
 import os
 import tempfile
 
@@ -371,6 +376,13 @@ class WeightNearest(dict):
 
         data1=self.data1
         data2=self.data2
+
+        if len(data1.shape) == 1:
+            data1 = data1[:,numpy.newaxis]
+        if len(data2.shape) == 1:
+            data2 = data2[:,numpy.newaxis]
+
+
         weights1=self.get_weights()
         if self.npass==1:
             ind=numpy.arange(weights1.size)
@@ -487,6 +499,9 @@ def plot_results1d(data1, data2, weights1, binsize=None,
     h1=h1dict['hist']/float(h1dict['hist'].sum())
     h1w=h1wdict['whist']/float(h1wdict['whist'].sum())
     h2=h2dict['hist']/float(h2dict['hist'].sum())
+    #h1=h1dict['hist']
+    #h1w=h1wdict['whist']
+    #h2=h2dict['hist']
 
     hdiff = h2-h1w
 
