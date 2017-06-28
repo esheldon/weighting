@@ -148,10 +148,14 @@ class WeightNearest(dict):
         """
         For 2 pass, the indices used for the second pass
         """
-        if not hasattr(self, 'used_indices'):
-            raise RuntimeError("run a 2 pass calculation first")
 
-        return self.used_indices
+        if self.npass==1:
+            return numpy.arange(self.data1.size)
+        else:
+            if not hasattr(self, 'used_indices'):
+                raise RuntimeError("run a 2 pass calculation first")
+
+            return self.used_indices
 
     def get_num_data(self):
         """
