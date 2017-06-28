@@ -1,11 +1,13 @@
 SHELL      = /bin/sh
 
-CC=c99
-LD=c99
+#CC=c99
+#LD=c99
+CC=gcc
+LD=gcc
 
 #OPTS= -O3 -funroll-loops -g
 #OPTS= -O3 -g
-OPTS= -O3 -g
+OPTS= -std=c99 -O3 -g
 
 # if ndim is not sent with "make ndim=" then default is 5
 ndim:=5

@@ -150,7 +150,7 @@ class WeightNearest(dict):
         """
 
         if self.npass==1:
-            return numpy.arange(self.data1.size)
+            return numpy.arange(self.data1.shape[0])
         else:
             if not hasattr(self, 'used_indices'):
                 raise RuntimeError("run a 2 pass calculation first")
